@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+Список героев
+{% endblock %}
+
+{% block content %}
+<div id="characters">
+    {% for i in form %}
+    <a class="character" href="/heroes/{{ i.id }}">
+        <img src="/media/{{ i.image_preview }}">
+        <div class="text">
+            <div class="top">
+                <div class="name">{{ i.first_name }} {{ i.last_name }}</div>
+                <div class="work">{{ i.work }}</div>
+            </div>
+            <div class="description">{{ i.short_description }}</div>
+            <p>Подробнее...</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

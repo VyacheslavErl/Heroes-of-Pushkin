@@ -1,0 +1,15 @@
+<a class="header" href="/">Герои Пушкина</a>
+<div id="navbar">
+    <a href="/heroes"
+        {% if request.path == '/heroes' %}
+            class="active"
+        {% endif %}>
+        Герои
+    </a>
+    <a href="/about"
+        {% if request.path == '/about' %}
+            class="active"
+        {% endif %}>
+        Информация
+    </a>
+</div>

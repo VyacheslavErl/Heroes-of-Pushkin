@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+Список героев
+{% endblock %}
+
+{% block content %}
+<div id="character">
+    <div class="name">{{ form.first_name }} {{ form.last_name }}</div>
+    <div class="description">{{ form.description }}</div>
+    <div class="circle"></div>
+    <img class="image" src="/media/{{ form.image}}">
+    <a class="prev-btn" href="/heroes/{{ form.id|add:-1 }}"><</a>
+    <a class="next-btn" href="/heroes/{{ form.id|add:1 }}">></a>
+</div>
+{% endblock %}

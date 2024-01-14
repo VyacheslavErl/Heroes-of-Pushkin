@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+Информация
+{% endblock %}
+
+{% block content %}
+<div id="about">
+    <div class="info">
+        Проект «Герои Пушкина» призван познакомить читателей с неповторимыми образами, созданными великим русским поэтом Александром Сергеевичем Пушкиным. В рамках проекта предлагается увлекательное путешествие по миру литературных героев, сопровождающееся красочными портретами захватывающих историй их жизни.
+        Проект создан с целью привлечь внимание к богатству и многообразию литературного наследия Пушкина, а также показать, что его герои до сих пор актуальны и понятны современному читателю.
+        Проект разработан для фестиваля компьютерного творчества «ИНФО-МИР» в рамках конкурса «МИР проектов» в номинации «Виртуальный мир». Автор проекта – Вячеслав Максимович, обучающийся 10 класса Тольяттинской школы №43.
+    </div>
+    <button class="contacts" onclick="showModal()">Контакты</button>
+    <div class="modal">
+        <div class="overlay" onclick="hideModal()"></div>
+        <div class="modal-content">
+            <a href="mailto:wwwolll153@gmail.com"><img src="/media/images/gmail.png" alt="email"></a>
+            <a href="https://vk.com/vyaceslaverl"><img src="/media/images/vk.png" alt="vk"></a>
+            <a href="https://t.me/rezhlo"><img src="/media/images/telegram.png" alt="telegram"></a>
+            <a href="https://github.com/VyacheslavErl"><img src="/media/images/github.png" alt="github"></a>
+            <div class="exit-btn" onclick="hideModal()">x</div>
+        </div>
+    </div>
+    <script>
+    function showModal() {
+        document.querySelector(".modal").style.display = "flex";
+    }
+    
+    function hideModal() {
+        document.querySelector(".modal").removeAttribute("style");
+    }
+    </script>
+</div>
+{% endblock %}
